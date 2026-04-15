@@ -135,6 +135,25 @@
 
 .hero-title-group {
   display: inline-block;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(64px, 9vw, 150px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  margin: 0;
+  display: inline-block; /* 🔥 important */
+}
+
+.hero-text h1 {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(64px, 9vw, 150px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  margin: 0;
+  display: inline-block; /* 🔥 important */
 }
 
 .hero-kicker {
@@ -156,11 +175,12 @@
 
 .hero-meta {
   margin-top: 16px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   font-size: 13px;
   letter-spacing: 0.4em;
+  width: 100%;
 }
 
     .intro-card {
@@ -395,10 +415,11 @@
   <div class="hero-title-group">
     <p class="hero-kicker">Illustration</p>
     <h1>Portfolio</h1>
-    <div class="hero-meta">
-      <span>Koro</span>
-      <span>2026</span>
-    </div>
+   <div class="hero-meta">
+  <span>Koro</span>
+  <span></span>
+  <span>2026</span>
+</div>
   </div>
 </div>
 </div>
