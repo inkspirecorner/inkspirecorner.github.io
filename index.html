@@ -123,7 +123,7 @@
       background: rgba(0, 0, 0, 0.22);
     }
 
-  .hero-text {
+ .hero-text {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -133,12 +133,15 @@
   color: #fff;
 }
 
+.hero-title-group {
+  display: inline-block;
+}
+
 .hero-kicker {
   font-size: 14px;
-  letter-spacing: 3.8em; 
+  letter-spacing: 0.95em;
   margin-bottom: 20px;
   text-transform: uppercase;
-  transform: translateX(21px);
 }
 
 .hero-text h1 {
@@ -150,13 +153,10 @@
 }
 
 .hero-meta {
-  margin-top: 18px;
+  margin-top: 16px;
   width: 100%;
-  max-width: 400px; /* controls how wide it spreads */
-  
   display: flex;
   justify-content: space-between;
-
   font-size: 13px;
   letter-spacing: 0.4em;
 }
@@ -390,13 +390,16 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-text">
-          <p class="hero-kicker">Illustration</p>
-          <h1>Portfolio</h1>
-          <div class="hero-meta">
-            <span>Koro</span>
-            <span>2026</span>
-          </div>
-        </div>
+  <p class="hero-kicker">Illustration</p>
+
+  <div class="hero-title-group">
+    <h1>Portfolio</h1>
+    <div class="hero-meta">
+      <span>Koro</span>
+      <span>2026</span>
+    </div>
+  </div>
+</div>
       </div>
 
       <div class="intro-card">
