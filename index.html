@@ -257,6 +257,43 @@
       margin-top: 0;
     }
 
+    .gallery-filter {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 22px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  color: #d7d7d7;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.filter-btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background: #ffffff;
+  color: #111;
+  border-color: #ffffff;
+}
+
+.portfolio-item.hide {
+  display: none;
+}
+
     .portfolio-item {
       background: #111;
       overflow: hidden;
