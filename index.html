@@ -134,9 +134,22 @@
     }
 
     .hero-kicker {
-      font-size: 14px;
-      letter-spacing: 0.45em;
-      margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 10px;
+
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.hero-kicker::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
     }
 
     .hero-text h1 {
