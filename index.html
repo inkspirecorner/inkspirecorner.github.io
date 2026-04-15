@@ -123,15 +123,17 @@
       background: rgba(0, 0, 0, 0.22);
     }
 
-    .hero-text {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      text-transform: uppercase;
-      color: #fff;
-    }
+   .hero-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+
+  width: fit-content; /* 👈 THIS makes alignment perfect */
+}
 
     .hero-kicker {
   display: block;
