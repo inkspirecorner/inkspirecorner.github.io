@@ -27,12 +27,12 @@
       text-decoration: none;
     }
 
- .page {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+    .page {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
     header {
       padding-top: 38px;
@@ -92,6 +92,50 @@
       color: #fff;
     }
 
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      height: 100%;
+      background: #000;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      transition: 0.3s ease;
+      z-index: 9999;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-menu a {
+      font-family: Oswald, Arial, sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .menu-close {
+      font-size: 28px;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+
+    .menu-socials {
+      margin-top: auto;
+      display: flex;
+      gap: 16px;
+    }
+
     .shop {
       padding: 20px 0 60px;
     }
@@ -110,29 +154,26 @@
     }
 
     .product-image {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: 4px;
-  background: #111;
-  margin-bottom: 12px;
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #111;
+      margin-bottom: 12px;
+    }
 
     .product-image img {
-  transition: transform 0.4s ease;
-}
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.4s ease;
+    }
 
-.product-image:hover img {
-  transform: scale(1.05);
-}
-    
+    .product-image:hover img {
+      transform: scale(1.05);
+    }
+
     .shop-item h3 {
       font-size: 16px;
       margin-bottom: 6px;
@@ -157,77 +198,62 @@
       background: #fff;
       color: #000;
     }
-.size-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
 
-.size-options a {
-  width: fit-content;
-  padding: 8px 16px;
-  border: 1px solid #fff;
-  border-radius: 999px;
-  font-size: 14px;
-  text-decoration: none;
-}
+    .size-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
 
-.size-options a:hover {
-  background: #fff;
-  color: #000;
-}
-    
-.shop-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border: 1px solid #333;
-  border-radius: 4px;
-  display: grid;
-  place-items: center;
-  color: #777;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-    
-    @media (max-width: 820px) {
-  .topbar {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-  }
+    .size-options a {
+      width: fit-content;
+      padding: 8px 16px;
+      border: 1px solid #fff;
+      border-radius: 999px;
+      font-size: 14px;
+      text-decoration: none;
+    }
 
-  .nav-left,
-  .site-title,
-  .social-right {
-    justify-self: center;
-  }
+    .size-options a:hover {
+      background: #fff;
+      color: #000;
+    }
 
-  .shop-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .shop-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #333;
+      border-radius: 4px;
+      display: grid;
+      place-items: center;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
 
-.floating-request {
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #aaa;
-  background: transparent;
-  border: none;
-  padding: 0;
-  text-decoration: none;
-  z-index: 9999;
-  transition: all 0.25s ease;
-}
+    .floating-request {
+      position: fixed;
+      bottom: 20px;
+      right: 40px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #aaa;
+      background: transparent;
+      border: none;
+      padding: 0;
+      text-decoration: none;
+      z-index: 9999;
+      transition: all 0.25s ease;
+    }
 
-.floating-request:hover {
-  color: #fff;
-  transform: translateY(-2px);
-  opacity: 1;
-}
+    .floating-request:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      opacity: 1;
+    }
+
     .contact {
       padding: 80px 0 60px;
     }
@@ -251,6 +277,48 @@
       color: #fff;
     }
 
+    @media (max-width: 820px) {
+      .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+      }
+
+      .nav-left,
+      .social-right {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+        justify-self: end;
+      }
+
+      .site-title {
+        justify-self: center;
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 0 16px;
+      }
+
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-request {
+        right: 20px;
+        bottom: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -270,73 +338,105 @@
           <a href="#">Be</a>
           <a href="#">Ig</a>
         </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       </div>
     </header>
 
-<main class="shop">
-  <h1></h1>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="menu-close" onclick="toggleMenu()">✕</div>
 
-  <div class="shop-grid">
-    <!-- product block -->
-    <div class="shop-item">
-      <div class="product-image">
-        <img src="images/shop/my box poster preview.png" alt="my box poster">
-      </div>
+      <a href="index.html">Work</a>
+      <a href="shop.html" onclick="toggleMenu()">Shop</a>
+      <a href="index.html#contact">About & Contact</a>
 
-      <h3>my box poster</h3>
-      <p>Signed poster</p>
-
-      <div class="size-options">
-        <a href="LINK-8x10" target="_blank" class="shop-button">8x10 — $15</a>
-        <a href="LINK-11x14" target="_blank" class="shop-button">11x14 — $20</a>
-        <a href="LINK-16x20" target="_blank" class="shop-button">16x20 — $30</a>
+      <div class="menu-socials">
+        <a href="#">Tw</a>
+        <a href="#">Be</a>
+        <a href="#">Ig</a>
       </div>
     </div>
 
-    <!-- product block -->
-    <div class="shop-item">
-      <div class="product-image">
-        <img src="images/shop/fox poster preview.png" alt="Cute Fox">
+    <main class="shop">
+      <h1></h1>
+
+      <div class="shop-grid">
+        <div class="shop-item">
+          <div class="product-image">
+            <img src="images/shop/my box poster preview.png" alt="my box poster">
+          </div>
+
+          <h3>my box poster</h3>
+          <p>Signed poster</p>
+
+          <div class="size-options">
+            <a href="LINK-8x10" target="_blank" class="shop-button">8x10 — $15</a>
+            <a href="LINK-11x14" target="_blank" class="shop-button">11x14 — $20</a>
+            <a href="LINK-16x20" target="_blank" class="shop-button">16x20 — $30</a>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <div class="product-image">
+            <img src="images/shop/fox poster preview.png" alt="Cute Fox">
+          </div>
+
+          <h3>You Are Enough</h3>
+          <p>Signed poster</p>
+
+          <div class="size-options">
+            <a href="LINK-8x10" target="_blank" class="shop-button">8x10 — $15</a>
+            <a href="LINK-11x14" target="_blank" class="shop-button">11x14 — $20</a>
+            <a href="LINK-16x20" target="_blank" class="shop-button">16x20 — $30</a>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <div class="product-image">
+            <img src="Marine Life" alt="Marine Life">
+          </div>
+
+          <h3></h3>
+          <p>Signed poster</p>
+
+          <div class="size-options">
+            <a href="#" class="shop-button">8×10 — $15</a>
+            <a href="#" class="shop-button">11×14 — $20</a>
+            <a href="#" class="shop-button">16×20 — $30</a>
+          </div>
+        </div>
       </div>
+    </main>
 
-      <h3>You Are Enough</h3>
-      <p>Signed poster</p>
-
-      <div class="size-options">
-        <a href="LINK-8x10" target="_blank" class="shop-button">8x10 — $15</a>
-        <a href="LINK-11x14" target="_blank" class="shop-button">11x14 — $20</a>
-        <a href="LINK-16x20" target="_blank" class="shop-button">16x20 — $30</a>
-      </div>
-    </div>
-
-    <!-- product block -->
-    <div class="shop-item">
-      <div class="product-image">
-        <img src="Marine Life" alt="Marine Life">
-      </div>
-
-      <h3></h3>
-      <p>Signed poster</p>
-
-      <div class="size-options">
-        <a href="#">8×10 — $15</a>
-        <a href="#">11×14 — $20</a>
-        <a href="#">16×20 — $30</a>
-      </div>
-    </div>
+    <section id="contact" class="contact">
+      <h2>About & Contact</h2>
+      <p>Sketches, illustrations, and portraits by Lara Koro.</p>
+      <p>Email: <a href="mailto:Inkspirecorner@gmail.com">Inkspirecorner@gmail.com</a></p>
+    </section>
   </div>
-</main>
 
-<section id="contact" class="contact">
-  <h2>About & Contact</h2>
-  <p>Sketches, illustrations, and portraits by Lara Koro.</p>
-  <p>Email: <a href="mailto:Inkspirecorner@gmail.com">Inkspirecorner@gmail.com</a></p>
-</section>
-</div>
+  <a href="mailto:Inkspirecorner@gmail.com" class="floating-request">
+    Custom Request?
+  </a>
 
-<a href="mailto:Inkspirecorner@gmail.com" class="floating-request">
-  Custom Request?
-</a>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener("click", function (e) {
+      const menu = document.getElementById("mobileMenu");
+      const toggle = document.querySelector(".menu-toggle");
+
+      if (
+        menu.classList.contains("active") &&
+        !menu.contains(e.target) &&
+        !toggle.contains(e.target)
+      ) {
+        menu.classList.remove("active");
+      }
+    });
+  </script>
 </body>
 </html>
-</body>
