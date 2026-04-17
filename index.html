@@ -481,7 +481,7 @@
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -100%; /* THIS hides it */
   width: 75%;
   height: 100%;
   background: #000;
@@ -503,6 +503,11 @@
   text-transform: uppercase;
   color: #fff;
 }
+    .menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
 
 .menu-socials {
   margin-top: auto;
@@ -514,6 +519,13 @@
   .nav-left {
     display: none;
   }
+
+    .menu-toggle {
+    display: block;
+    justify-self: center;
+    margin-top: 10px;
+  }
+}
 
   .social-right {
     display: none;
