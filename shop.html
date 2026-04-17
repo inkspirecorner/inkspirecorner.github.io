@@ -203,7 +203,22 @@
       .shop-grid {
   grid-template-columns: repeat(2, 1fr);
 }
-    }
+      .floating-request {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: rgba(20,20,20,0.8);  /* updated */
+  backdrop-filter: blur(6px);     
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid #444;
+  z-index: 999;
+}
+
   </style>
 </head>
 <body>
