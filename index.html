@@ -477,21 +477,6 @@
   font-size: 26px;
   cursor: pointer;
 }
-    
-<div class="mobile-menu" id="mobileMenu">
-  
-  <div class="menu-close" onclick="toggleMenu()">✕</div>
-
-  <a href="#work">Work</a>
-  <a href="shop.html">Shop</a>
-  <a href="#contact">About & Contact</a>
-
-  <div class="menu-socials">
-    <a href="#">TT</a>
-    <a href="#">BS</a>
-    <a href="#">IG</a>
-  </div>
-
 </div>
 .mobile-menu {
   position: fixed;
@@ -708,6 +693,18 @@ function toggleMenu() {
   menu.classList.toggle("active");
 }
 </script>
+  document.addEventListener("click", function (e) {
+  const menu = document.getElementById("mobileMenu");
+  const toggle = document.querySelector(".menu-toggle");
+
+  if (
+    menu.classList.contains("active") &&
+    !menu.contains(e.target) &&
+    !toggle.contains(e.target)
+  ) {
+    menu.classList.remove("active");
+  }
+});
 </body>
 </html>
 </body>
