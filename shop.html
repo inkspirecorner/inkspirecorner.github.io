@@ -495,15 +495,16 @@
     });
   </script>
 
-  <script>
+ <script>
   const scrollTopBtn = document.querySelector(".scroll-top");
 
   window.addEventListener("scroll", () => {
-    const scrollPosition = window.innerHeight + window.scrollY;
-    const pageHeight = document.body.offsetHeight;
+    const scrollY = window.scrollY;
+    const pageHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
 
-    // show only near bottom (adjust 200 if needed)
-    if (scrollPosition >= pageHeight - 200) {
+    // Show when you're within 300px of bottom
+    if (scrollY + windowHeight >= pageHeight - 300) {
       scrollTopBtn.classList.add("show");
     } else {
       scrollTopBtn.classList.remove("show");
