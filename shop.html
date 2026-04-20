@@ -254,7 +254,7 @@
       opacity: 1;
     }
 
-   .scroll-top {
+  .scroll-top {
   position: fixed;
   bottom: 24px;
   left: 50%;
@@ -264,8 +264,7 @@
   height: 42px;
   border-radius: 50%;
   
-  border: 1px solid #aaa;
-  color: #aaa;
+  border: 1px solid #fff;
   display: grid;
   place-items: center;
   
@@ -276,13 +275,20 @@
   background: transparent;
   z-index: 9999;
   
+  opacity: 0;                /* 👈 hidden by default */
+  pointer-events: none;     /* 👈 not clickable */
+  
   transition: all 0.25s ease;
+}
+
+.scroll-top.show {
+  opacity: 1;               /* 👈 visible */
+  pointer-events: auto;
 }
 
 .scroll-top:hover {
   background: #fff;
   color: #000;
-  box-shadow: 0 4px 12px rgba(255,255,255,0.2);
   transform: translateX(-50%) translateY(-3px);
 }
 
@@ -488,6 +494,22 @@
       }
     });
   </script>
+
+  <script>
+  const scrollTopBtn = document.querySelector(".scroll-top");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const pageHeight = document.body.offsetHeight;
+
+    // show only near bottom (adjust 200 if needed)
+    if (scrollPosition >= pageHeight - 200) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+</script>
 
 <a href="#" class="scroll-top">^</a>
   
