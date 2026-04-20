@@ -254,16 +254,21 @@
     }
 
     .skill-tags span {
-      width: 46px;
-      height: 46px;
-      border-radius: 10px;
-      background: #2a2a2a;
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-family: Oswald, Arial, sans-serif;
-      font-size: 18px;
-    }
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #2a2a2a;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.skill-tags span svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
     main {
       padding-top: 28px;
@@ -612,12 +617,30 @@ Influenced by classical techniques, my work emphasizes softness, contrast, and t
           </p>
 
           <div class="intro-block">
-            <h3>Education</h3>
-            <p>B.A. Multimedia<p> 
-            <p>A.S. Graphic Design<p>
-            <p>Fine Arts | Illustration background</p>
-          </div>
-        </div>
+  <h3>Mediums</h3>
+  <div class="skill-tags medium-tags">
+    <span title="Charcoal">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M14 40 C18 28, 28 20, 40 18 C47 17, 52 20, 50 27 C48 36, 38 44, 25 46 C18 47, 12 45, 14 40 Z" fill="currentColor" opacity="0.9"/>
+        <path d="M18 43 C24 39, 31 36, 40 34" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.55"/>
+      </svg>
+    </span>
+
+    <span title="Watercolor">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 14 C42 14, 50 22, 50 32 C50 42, 42 50, 32 50 C22 50, 14 42, 14 32 C14 22, 22 14, 32 14 Z" fill="currentColor" opacity="0.18"/>
+        <path d="M22 24 C27 18, 38 18, 43 24 C47 28, 46 38, 39 43 C32 47, 21 44, 18 36 C16 31, 18 27, 22 24 Z" fill="currentColor" opacity="0.42"/>
+      </svg>
+    </span>
+
+    <span title="Acrylic">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M14 38 C19 34, 24 35, 29 31 C34 27, 38 22, 45 22 C49 22, 52 24, 52 28 C52 34, 45 40, 38 42 C31 44, 24 44, 18 43 C15 42, 13 40, 14 38 Z" fill="currentColor" opacity="0.88"/>
+        <path d="M17 43 C24 46, 36 45, 46 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+      </svg>
+    </span>
+  </div>
+</div>
 
         <div class="intro-side">
           <div class="intro-block">
