@@ -360,6 +360,27 @@
       color: #fff;
     }
 
+    .floating-request {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  z-index: 9999;
+  transition: all 0.25s ease;
+}
+
+.floating-request:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+    
     .menu-toggle {
       display: none;
       font-size: 26px;
@@ -681,10 +702,6 @@
     </main>
   </div>
 
-   <a href="mailto:Inkspirecorner@gmail.com" class="floating-request">
-    Custom Request?
-  </a>
-
   <script>
     const filterButtons = document.querySelectorAll(".filter-btn");
     const galleryItems = document.querySelectorAll(".portfolio-item");
@@ -726,5 +743,8 @@
       }
     });
   </script>
+   <a href="mailto:Inkspirecorner@gmail.com" class="floating-request">
+    Custom Request?
+  </a>
 </body>
 </html>
