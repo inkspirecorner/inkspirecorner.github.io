@@ -254,6 +254,22 @@
       opacity: 1;
     }
 
+    .scroll-top {
+  position: fixed;
+  bottom: 20px;
+  left: 40px; /* opposite side of your request button */
+  font-size: 16px;
+  color: #aaa;
+  text-decoration: none;
+  z-index: 9999;
+  transition: all 0.25s ease;
+}
+
+.scroll-top:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
     .contact {
       padding: 80px 0 60px;
     }
@@ -456,5 +472,8 @@
       }
     });
   </script>
+
+<a href="#" class="scroll-top">^</a>
+  
 </body>
 </html>
