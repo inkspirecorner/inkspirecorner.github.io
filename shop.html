@@ -256,19 +256,32 @@
 
    .scroll-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 18px;
-  color: #aaa;
+  
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  
+  border: 1px solid #fff;
+  display: grid;
+  place-items: center;
+  
+  font-size: 16px;
+  color: #fff;
   text-decoration: none;
+  
+  background: transparent;
   z-index: 9999;
+  
   transition: all 0.25s ease;
 }
 
 .scroll-top:hover {
-  color: #fff;
-  transform: translateX(-50%) translateY(-2px);
+  background: #fff;
+  color: #000;
+  transform: translateX(-50%) translateY(-3px);
 }
 
     .contact {
