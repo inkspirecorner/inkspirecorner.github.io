@@ -254,11 +254,12 @@
       opacity: 1;
     }
 
-    .scroll-top {
+   .scroll-top {
   position: fixed;
   bottom: 20px;
-  left: 40px; /* opposite side of your request button */
-  font-size: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
   color: #aaa;
   text-decoration: none;
   z-index: 9999;
@@ -267,7 +268,7 @@
 
 .scroll-top:hover {
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
 }
 
     .contact {
